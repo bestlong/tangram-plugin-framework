@@ -1,5 +1,5 @@
 
-//delphi°æ±¾
+//delphiç‰ˆæœ¬
 //{$IFDEF VER80}  - Delphi 1
 //{$IFDEF VER90}  - Delphi 2
 //{$IFDEF VER100} - Delphi 3
@@ -16,7 +16,7 @@
 //{$IFDEF VER210} - Delphi 2010
 //{$IFDEF VER220} - Delphi XE
 
-//±àÒëÆ÷°æ±¾(CompilerVersion)
+//ç¼–è¯‘å™¨ç‰ˆæœ¬(CompilerVersion)
 //Delphi XE   - 22
 //Delphi 2010 - 21
 //Delphi 2009 - 20
