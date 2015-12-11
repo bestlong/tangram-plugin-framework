@@ -1,20 +1,19 @@
-﻿{------------------------------------
-  功能说明：框架加载单元。只需要在主程序工程文件用本单元替换Forms单元即可加载框架，
-            其他的都不需要再改了
+﻿{ ------------------------------------
+  功能说明：框架加载单元。只需要在主程序工程文件用本单元替换 Forms 单元即可加载框架，其他的都不需要再改了
   创建日期：2010/10/18
   作者：wei
   版权：wei
--------------------------------------}
+  ------------------------------------- }
 unit uTangramFramework;
 
 interface
 
-uses SysUtils,Classes,Forms,Windows,SysModuleMgr;
+uses SysUtils, Classes, Forms, Windows, SysModuleMgr;
 
 Type
-  TTangramApp=Class
+  TTangramApp = Class
   private
-    FModuleMgr:TModuleMgr;
+    FModuleMgr: TModuleMgr;
     FLoadModuleFromRegistry: Boolean;
 
     function GetFormApp: TApplication;
@@ -30,31 +29,31 @@ Type
     procedure Initialize;
     procedure CreateForm(InstanceClass: TComponentClass; var Reference);
     procedure Run;
-    property FormApp:TApplication Read GetFormApp;
-    property MainFormOnTaskbar:Boolean Read GetMainFormOnTaskbar Write SetMainFormOnTaskbar;
+    property FormApp: TApplication Read GetFormApp;
+    property MainFormOnTaskbar: Boolean Read GetMainFormOnTaskbar Write SetMainFormOnTaskbar;
     Constructor Create;
-    Destructor Destroy;override;
+    Destructor Destroy; override;
 
-    property LoadModuleFromRegistry:Boolean Read FLoadModuleFromRegistry Write FLoadModuleFromRegistry;
+    property LoadModuleFromRegistry: Boolean Read FLoadModuleFromRegistry Write FLoadModuleFromRegistry;
   end;
+
 var
-  Application:TTangramApp;
+  Application: TTangramApp;
+
 implementation
 
-{$i tangram.inc}
-
+{$I tangram.inc}
 { TTangramApp }
 
 constructor TTangramApp.Create;
 begin
-  FLoadModuleFromRegistry:=True;
-  FModuleMgr:=TModuleMgr.Create;
+  FLoadModuleFromRegistry := True;
+  FModuleMgr := TModuleMgr.Create;
 end;
 
-procedure TTangramApp.CreateForm(InstanceClass: TComponentClass;
-  var Reference);
+procedure TTangramApp.CreateForm(InstanceClass: TComponentClass; var Reference);
 begin
-  Forms.Application.CreateForm(InstanceClass,Reference);
+  Forms.Application.CreateForm(InstanceClass, Reference);
 end;
 
 destructor TTangramApp.Destroy;
@@ -65,19 +64,19 @@ end;
 
 function TTangramApp.GetFormApp: TApplication;
 begin
-  Result:=Forms.Application;
+  Result := Forms.Application;
 end;
 
 function TTangramApp.GetMainFormOnTaskbar: Boolean;
 begin
-  {$IFDEF D2007UP}
-  Result:=Forms.Application.MainFormOnTaskbar;
-  {$ENDIF}
+{$IFDEF D2007UP}
+  Result := Forms.Application.MainFormOnTaskbar;
+{$ENDIF}
 end;
 
 function TTangramApp.GetTitle: string;
 begin
-  Result:=Forms.Application.Title;
+  Result := Forms.Application.Title;
 end;
 
 procedure TTangramApp.Initialize;
@@ -87,7 +86,7 @@ end;
 
 function TTangramApp.ReadHintHidePause: Integer;
 begin
-  Result:=Forms.Application.HintHidePause;
+  Result := Forms.Application.HintHidePause;
 end;
 
 procedure TTangramApp.Run;
@@ -103,23 +102,27 @@ end;
 
 procedure TTangramApp.SetMainFormOnTaskbar(const Value: Boolean);
 begin
-  {$IFDEF D2007UP}
-  Forms.Application.MainFormOnTaskbar:=Value;
-  {$ENDIF}
+{$IFDEF D2007UP}
+  Forms.Application.MainFormOnTaskbar := Value;
+{$ENDIF}
 end;
 
 procedure TTangramApp.SetTitle(const Value: string);
 begin
-  Forms.Application.Title:=Value;
+  Forms.Application.Title := Value;
 end;
 
 procedure TTangramApp.WriteHintHidePause(const Value: Integer);
 begin
-  Forms.Application.HintHidePause:=Value;
+  Forms.Application.HintHidePause := Value;
 end;
 
 initialization
-  Application:=TTangramApp.Create;
+
+Application := TTangramApp.Create;
+
 finalization
-  Application.Free;
+
+Application.Free;
+
 end.
