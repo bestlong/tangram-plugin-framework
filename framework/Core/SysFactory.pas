@@ -1,8 +1,8 @@
 { ------------------------------------
-  ¹¦ÄÜËµÃ÷£º¹¤³§
-  ´´½¨ÈÕÆÚ£º2010/03/29
-  ×÷Õß£ºWZW
-  °æÈ¨£ºWZW
+  åŠŸèƒ½è¯´æ˜ï¼šå·¥å‚
+  åˆ›å»ºæ—¥æœŸï¼š2010/03/29
+  ä½œè€…ï¼šWZW
+  ç‰ˆæƒï¼šWZW
   ------------------------------------- }
 unit SysFactory;
 
@@ -11,7 +11,7 @@ interface
 Uses Classes, SysUtils, FactoryIntf, SvcInfoIntf;
 
 Type
-  // ¹¤³§»ùÀà
+  // å·¥å‚åŸºç±»
   TBaseFactory = Class(TFactory, ISvcInfoEx)
   private
   protected
@@ -26,7 +26,7 @@ Type
     procedure EnumKeys(Intf: IEnumKey); override;
   end;
 
-  // ½Ó¿Ú¹¤³§
+  // æ¥å£å·¥å‚
   TIntfFactory = Class(TBaseFactory)
   private
     Flag: Integer;
@@ -45,7 +45,7 @@ Type
     procedure ReleaseIntf; override;
   end;
 
-  // µ¥Àı¹¤³§
+  // å•ä¾‹å·¥å‚
   TSingletonFactory = Class(TBaseFactory)
   private
     FIntfCreatorFunc: TIntfCreatorFunc;
@@ -66,7 +66,7 @@ Type
     procedure ReleaseIntf; override;
   end;
 
-  // ÊµÀı¹¤³§
+  // å®ä¾‹å·¥å‚
   TObjFactory = Class(TSingletonFactory)
   private
     FOwnsObj: Boolean;
@@ -343,7 +343,7 @@ begin
   if Instance=nil then
     raise Exception.CreateFmt(Err_InstanceIsNil,[IntfName]);
 
-  Inherited Create(IntfName,nil,IntfRelease);//ÍùÉÏºóFIntfRef»á±»¸³Îªnil
+  Inherited Create(IntfName,nil,IntfRelease);//å¾€ä¸ŠåFIntfRefä¼šè¢«èµ‹ä¸ºnil
   FOwnsObj := OwnsObj or IntfRelease or (Instance is TInterfacedObject);
   FInstance:= Instance;
 end;

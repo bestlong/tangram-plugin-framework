@@ -1,8 +1,8 @@
 {------------------------------------
-  ¹¦ÄÜËµÃ÷£º¹şÏ£±í
-  ´´½¨ÈÕÆÚ£º2009/05/05
-  ×÷Õß£ºwzw
-  °æÈ¨£ºwzw
+  åŠŸèƒ½è¯´æ˜ï¼šå“ˆå¸Œè¡¨
+  åˆ›å»ºæ—¥æœŸï¼š2009/05/05
+  ä½œè€…ï¼šwzw
+  ç‰ˆæƒï¼šwzw
 -------------------------------------}
 unit uHashList;
 
@@ -39,7 +39,7 @@ Type
     function Modify(const Key: string; Value: Pointer): Boolean;
     function ValueOf(const Key: string): Pointer;
     function FindKey(const Key: string): Boolean;
-    // ÁĞ¾Ù
+    // åˆ—ä¸¾
     procedure StartEnum;
     function EnumValue(out Value: Pointer): Boolean;
     property OnDeletion: TDeletionEvent Read FOnDeletion Write FOnDeletion;

@@ -1,8 +1,8 @@
-{------------------------------------
-  ¹¦ÄÜËµÃ÷£º½Ó¿ÚËµÃ÷·şÎñ
-  ´´½¨ÈÕÆÚ£º2010/06/07
-  ×÷Õß£ºWZW
-  °æÈ¨£ºWZW
+ï»¿{------------------------------------
+  åŠŸèƒ½è¯´æ˜ï¼šæ¥å£è¯´æ˜æœåŠ¡
+  åˆ›å»ºæ—¥æœŸï¼š2010/06/07
+  ä½œè€…ï¼šWZW
+  ç‰ˆæƒï¼šWZW
 -------------------------------------}
 unit uSvcInfoObj;
 
@@ -37,7 +37,7 @@ end;}
 
 function TSvcInfoObj.GetComments: String;
 begin
-  Result:='ÓÃÓÚ»ñÈ¡µ±Ç°ÏµÍ³ËùÓĞ½Ó¿ÚĞÅÏ¢';
+  Result:='ç”¨äºè·å–å½“å‰ç³»ç»Ÿæ‰€æœ‰æ¥å£ä¿¡æ¯';
 end;
 
 function TSvcInfoObj.GetModuleName: String;
@@ -47,7 +47,7 @@ end;
 
 function TSvcInfoObj.GetTitle: String;
 begin
-  Result:='½Ó¿ÚËµÃ÷·şÎñ(ISvcInfoEx)';
+  Result:='æ¥å£è¯´æ˜æœåŠ¡(ISvcInfoEx)';
 end;
 
 function TSvcInfoObj.GetVersion: String;

@@ -22,7 +22,7 @@ package Tangram_Core;
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
-{$DESCRIPTION '¿ò¼ÜºËÐÄ°ü'}
+{$DESCRIPTION 'æ¡†æž¶æ ¸å¿ƒåŒ…'}
 {$RUNONLY}
 {$IMPLICITBUILD OFF}
 

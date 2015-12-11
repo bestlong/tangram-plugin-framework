@@ -1,8 +1,8 @@
-{------------------------------------
-  ¹¦ÄÜËµÃ÷£ºÏµÍ³Í¨Öª·şÎñ
-  ´´½¨ÈÕÆÚ£º2011/07/16
-  ×÷Õß£ºwzw
-  °æÈ¨£ºwzw
+ï»¿{------------------------------------
+  åŠŸèƒ½è¯´æ˜ï¼šç³»ç»Ÿé€šçŸ¥æœåŠ¡
+  åˆ›å»ºæ—¥æœŸï¼š2011/07/16
+  ä½œè€…ï¼šwzw
+  ç‰ˆæƒï¼šwzw
 -------------------------------------}
 unit SysNotifyService;
 
@@ -91,7 +91,7 @@ uses SysSvc,LogIntf,SysMsg,SysFactory;
 
 function TNotifyService.GetComments: String;
 begin
-  Result:='×¢²á¡¢·¢ËÍÍ¨Öª£¬ÓÃÓÚÄ£¿éÖ®¼äÍ¨Ñ¶¡£';
+  Result:='æ³¨å†Œã€å‘é€é€šçŸ¥ï¼Œç”¨äºæ¨¡å—ä¹‹é—´é€šè®¯ã€‚';
 end;
 
 function TNotifyService.GetModuleName: String;
@@ -101,7 +101,7 @@ end;
 
 function TNotifyService.GetTitle: String;
 begin
-  Result:='ÏµÍ³Í¨Öª·şÎñ½Ó¿Ú(INotifyService)';
+  Result:='ç³»ç»Ÿé€šçŸ¥æœåŠ¡æ¥å£(INotifyService)';
 end;
 
 function TNotifyService.GetVersion: String;

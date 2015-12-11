@@ -1,8 +1,8 @@
-{ ------------------------------------
-  ¹¦ÄÜËµÃ÷£ºÄ£¿é¹ÜÀí
-  ´´½¨ÈÕÆÚ£º2010/05/11
-  ×÷Õß£ºwzw
-  °æÈ¨£ºwzw
+ï»¿{ ------------------------------------
+  åŠŸèƒ½è¯´æ˜ï¼šæ¨¡å—ç®¡ç†
+  åˆ›å»ºæ—¥æœŸï¼š2010/05/11
+  ä½œè€…ï¼šwzw
+  ç‰ˆæƒï¼šwzw
   ------------------------------------- }
 unit SysModuleMgr;
 
@@ -233,21 +233,21 @@ var SvrInfo:TSvcInfoRec;
 begin
   SvrInfo.ModuleName:=ExtractFileName(SysUtils.GetModuleName(HInstance));
   SvrInfo.GUID:=GUIDToString(IModuleInfo);
-  SvrInfo.Title:='Ä£¿éĞÅÏ¢½Ó¿Ú(IModuleInfo)';
+  SvrInfo.Title:='æ¨¡å—ä¿¡æ¯æ¥å£(IModuleInfo)';
   SvrInfo.Version:='20100512.001';
-  SvrInfo.Comments:= 'ÓÃÓÚ»ñÈ¡µ±Ç°ÏµÍ³¼ÓÔØ°üµÄĞÅÏ¢¼°³õÊ¼»¯°ü¡£';
+  SvrInfo.Comments:= 'ç”¨äºè·å–å½“å‰ç³»ç»ŸåŠ è½½åŒ…çš„ä¿¡æ¯åŠåˆå§‹åŒ–åŒ…ã€‚';
   Intf.SvcInfo(SvrInfo);
 
   SvrInfo.GUID:=GUIDToString(IModuleLoader);
-  SvrInfo.Title:='Ä£¿é¼ÓÔØ½Ó¿Ú(IModuleLoader)';
+  SvrInfo.Title:='æ¨¡å—åŠ è½½æ¥å£(IModuleLoader)';
   SvrInfo.Version:='20110225.001';
-  SvrInfo.Comments:= 'ÓÃ»§¿ÉÒÔÓÃ´Ë½Ó¿Ú×ÔÖ÷¼ÓÔØÄ£¿é£¬²»ÓÃ¿ò¼ÜÄ¬ÈÏµÄ´Ó×¢²á±í¼ÓÔØ·½Ê½';
+  SvrInfo.Comments:= 'ç”¨æˆ·å¯ä»¥ç”¨æ­¤æ¥å£è‡ªä¸»åŠ è½½æ¨¡å—ï¼Œä¸ç”¨æ¡†æ¶é»˜è®¤çš„ä»æ³¨å†Œè¡¨åŠ è½½æ–¹å¼';
   Intf.SvcInfo(SvrInfo);
 
   SvrInfo.GUID:=GUIDToString(IModuleInstaller);
-  SvrInfo.Title:='Ä£¿é°²×°½Ó¿Ú(IModuleInstaller)';
+  SvrInfo.Title:='æ¨¡å—å®‰è£…æ¥å£(IModuleInstaller)';
   SvrInfo.Version:='20110420.001';
-  SvrInfo.Comments:= 'ÓÃÓÚ°²×°ºÍĞ¶ÔØÄ£¿é';
+  SvrInfo.Comments:= 'ç”¨äºå®‰è£…å’Œå¸è½½æ¨¡å—';
   Intf.SvcInfo(SvrInfo);
 end;
 
@@ -307,7 +307,7 @@ begin
   aList := TStringList.Create;
   try
     RegIntf.OpenKey(Key, False);
-    // ´¦ÀíÖµ
+    // å¤„ç†å€¼
     RegIntf.GetValueNames(ValueList);
     for i := 0 to ValueList.Count - 1 do
     begin
@@ -323,10 +323,10 @@ begin
           ModuleList.Add(ModuleFile);
       end;
     end;
-    // ÏòÏÂ²éÕÒ
+    // å‘ä¸‹æŸ¥æ‰¾
     RegIntf.GetKeyNames(SubKeyList);
     for i := 0 to SubKeyList.Count - 1 do
-      GetModuleList(RegIntf, ModuleList, Key + '\' + SubKeyList[i]); // µİ¹é
+      GetModuleList(RegIntf, ModuleList, Key + '\' + SubKeyList[i]); // é€’å½’
   finally
     SubKeyList.Free;
     ValueList.Free;
@@ -380,7 +380,7 @@ begin
       end;
     End;
   end;
-  // Òş²ØSplash´°Ìå
+  // éšè—Splashçª—ä½“
   if Assigned(SplashForm) then
   begin
     CurTick := GetTickCount;
@@ -398,7 +398,7 @@ begin
     //FactoryManager.FindFactory(ISplashForm).Free;
     SplashForm := nil;
   end;
-  // ¼ì²éµÇÂ¼
+  // æ£€æŸ¥ç™»å½•
   if SysService.QueryInterface(ILogin, LoginIntf) = S_OK then
   begin
     if not LoginIntf.Login then
@@ -428,13 +428,13 @@ begin
       if Assigned(SplashForm) then
         SplashForm.loading(Format(Msg_LoadingModule,
             [ExtractFileName(ModuleFile)]));
-      // ¼ÓÔØ°ü
+      // åŠ è½½åŒ…
       if FileExists(ModuleFile) then
         LoadModuleFromFile(ModuleFile)
       else
         WriteErrFmt(Err_ModuleNotExists, [ModuleFile]);
 
-      // ÏÔÊ¾Falsh´°Ìå
+      // æ˜¾ç¤ºFalshçª—ä½“
       if SplashForm = nil then
       begin
         if SysService.QueryInterface(ISplashForm, SplashForm) = S_OK then

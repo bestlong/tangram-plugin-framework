@@ -1,9 +1,9 @@
-{ ------------------------------------
-  ¹¦ÄÜËµÃ÷£ºÊµÏÖ¶Ô×¢²á±íµÄ¶ÁĞ´£¬ÒòÎªÍâ²¿Ò²¿ÉÄÜ
-  »á²Ù×÷×¢²á±í£¬ËùÒÔ·â×°³ÉÒ»¸öDLL
-  ´´½¨ÈÕÆÚ£º2008/11/14
-  ×÷Õß£ºwzw
-  °æÈ¨£ºwzw
+ï»¿{ ------------------------------------
+  åŠŸèƒ½è¯´æ˜ï¼šå®ç°å¯¹æ³¨å†Œè¡¨çš„è¯»å†™ï¼Œå› ä¸ºå¤–éƒ¨ä¹Ÿå¯èƒ½
+  ä¼šæ“ä½œæ³¨å†Œè¡¨ï¼Œæ‰€ä»¥å°è£…æˆä¸€ä¸ªDLL
+  åˆ›å»ºæ—¥æœŸï¼š2008/11/14
+  ä½œè€…ï¼šwzw
+  ç‰ˆæƒï¼šwzw
   ------------------------------------- }
 unit RegObj;
 
@@ -88,8 +88,8 @@ begin
   CoInitialize(nil);
   self.LoadRegistryFile(FileName);
   {try
-    //ÏÂÃæÕâÁ½¾äÓÃÓÚ½â¾ö¼ÓÔØDLL±¨No matching DOM Vendor: ""´íÎóµÄÎÊÌâ
-    //ÒıÓÃmsxmldom,xmldomÁ½µ¥Ôª
+    //ä¸‹é¢è¿™ä¸¤å¥ç”¨äºè§£å†³åŠ è½½DLLæŠ¥No matching DOM Vendor: ""é”™è¯¯çš„é—®é¢˜
+    //å¼•ç”¨msxmldom,xmldomä¸¤å•å…ƒ
     MSXML_DOM:=TMSDOMImplementationFactory.Create;
     RegisterDOMVendor(MSXML_DOM);
   Except
@@ -133,7 +133,7 @@ end;
 
 function TRegObj.GetComments: String;
 begin
-  Result := '¿ò¼Ü×¢²á±í·şÎñ½Ó¿Ú£¬ÓÃÓÚ²Ù×÷¿ò¼Ü×¢²á±í¡£';
+  Result := 'æ¡†æ¶æ³¨å†Œè¡¨æœåŠ¡æ¥å£ï¼Œç”¨äºæ“ä½œæ¡†æ¶æ³¨å†Œè¡¨ã€‚';
 end;
 
 procedure TRegObj.GetKeyNames(Strings: TStrings);
@@ -158,7 +158,7 @@ begin
 end;
 
 function TRegObj.GetNode(const key: Widestring; CanCreate: Boolean): IXMLNode;
-// ÄÚ²¿º¯Êı
+// å†…éƒ¨å‡½æ•°
   function InnerGetNode(const NodeStr: Widestring; FromNode: IXMLNode;
     aCanCreate: Boolean): IXMLNode;
   begin
@@ -196,7 +196,7 @@ begin
         exit;
       ParentNode := FoundNode;
     end;
-    Result := FoundNode; // Í¬ÉÏ
+    Result := FoundNode; // åŒä¸Š
   Finally
     aList.Free;
   end;
@@ -204,7 +204,7 @@ end;
 
 function TRegObj.GetTitle: String;
 begin
-  Result := '×¢²á±í½Ó¿Ú(IRegistry)';
+  Result := 'æ³¨å†Œè¡¨æ¥å£(IRegistry)';
 end;
 
 procedure TRegObj.GetValueNames(Strings: TStrings);
@@ -247,7 +247,7 @@ begin
     end;
   Except
     on E: Exception do
-      Raise ERegistryException.CreateFmt('´ò¿ª×¢²á±í³ö´í£º%s', [E.Message]);
+      Raise ERegistryException.CreateFmt('æ‰“å¼€æ³¨å†Œè¡¨å‡ºé”™ï¼š%s', [E.Message]);
   End;
 end;
 

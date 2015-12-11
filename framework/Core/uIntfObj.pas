@@ -1,9 +1,9 @@
 {------------------------------------
-  ¹¦ÄÜËµÃ÷£ºÊµÏÖIInterface½Ó¿Ú£¬µ«²»Í¬ÓÚTInterfacedObject£¬
-            ÒýÓÃ¼ÆÊýÎª0²»»á×Ô¶¯ÊÍ·Å
-  ´´½¨ÈÕÆÚ£º2011/04/02
-  ×÷Õß£ºWZW
-  °æÈ¨£ºWZW
+  åŠŸèƒ½è¯´æ˜Žï¼šå®žçŽ°IInterfaceæŽ¥å£ï¼Œä½†ä¸åŒäºŽTInterfacedObjectï¼Œ
+            å¼•ç”¨è®¡æ•°ä¸º0ä¸ä¼šè‡ªåŠ¨é‡Šæ”¾
+  åˆ›å»ºæ—¥æœŸï¼š2011/04/02
+  ä½œè€…ï¼šWZW
+  ç‰ˆæƒï¼šWZW
 -------------------------------------}
 unit uIntfObj;
 
