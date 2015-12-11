@@ -1,8 +1,8 @@
-{------------------------------------
-  ¹¦ÄÜËµÃ÷£º½Ó¿ÚÊµÏÖ×¨¼Ò
-  ´´½¨ÈÕÆÚ£º2010.05.08
-  ×÷Õß£ºWZW
-  °æÈ¨£ºWZW
+ï»¿{------------------------------------
+  åŠŸèƒ½è¯´æ˜ï¼šæ¥å£å®ç°ä¸“å®¶
+  åˆ›å»ºæ—¥æœŸï¼š2010.05.08
+  ä½œè€…ï¼šWZW
+  ç‰ˆæƒï¼šWZW
 -------------------------------------}
 unit uImpIntfExpt;
 
@@ -137,7 +137,7 @@ end;
 
 function TImpIntfExpt.GetComment: string;
 begin
-  Result:='½Ó¿ÚÊµÏÖµ¥ÔªÏòµ¼';
+  Result:='æ¥å£å®ç°å•å…ƒå‘å¯¼';
 end;
 
 function TImpIntfExpt.GetCreatorType: string;
@@ -187,7 +187,7 @@ end;
 
 function TImpIntfExpt.GetName: string;
 begin
-  Result:='½Ó¿ÚÊµÏÖµ¥Ôª';
+  Result:='æ¥å£å®ç°å•å…ƒ';
 end;
 
 function TImpIntfExpt.GetOwner: IOTAModule;
@@ -249,11 +249,11 @@ begin
     +'interface'+#13#10
     +#13#10
     +'uses sysUtils,Classes,SysFactory'+ifThen(FintfInfoEnable,',SvcInfoIntf','')
-    +';//¼ÇµÃÕâÀïÒıÓÃÄãµÄ½Ó¿Úµ¥Ôª'+#13#10
+    +';//è®°å¾—è¿™é‡Œå¼•ç”¨ä½ çš„æ¥å£å•å…ƒ'+#13#10
     +#13#10
     +'Type'+#13#10
     +'  T'+FIntfClass+'=Class(TInterfacedObject,IXXX'+IfThen(FIntfInfoEnable,',ISvcInfo','')
-    +')//¼ÙÉèÄãµÄ½Ó¿Ú½ĞIXXX(ÒÔÏÂÍ¬)'+#13#10
+    +')//å‡è®¾ä½ çš„æ¥å£å«IXXX(ä»¥ä¸‹åŒ)'+#13#10
     +'  private'+#13#10
     +'  protected'+#13#10;
 
@@ -266,7 +266,7 @@ begin
       +'    function GetComments:String;'+#13#10;
   end;
   s:=s+'  {IXXX}'+#13#10
-    +'    //ÕâÀï¼ÓÉÏÄã½Ó¿Ú·½·¨,È»ºó°´Ctrl+Shift+C£¬ÊµÏÖÄãµÄ½Ó¿Ú...'+#13#10
+    +'    //è¿™é‡ŒåŠ ä¸Šä½ æ¥å£æ–¹æ³•,ç„¶åæŒ‰Ctrl+Shift+Cï¼Œå®ç°ä½ çš„æ¥å£...'+#13#10
     +'  Public'+#13#10
     +'  End;'+#13#10
     +#13#10

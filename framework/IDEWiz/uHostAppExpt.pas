@@ -1,8 +1,8 @@
-{ ------------------------------------
-  ¹¦ÄÜËµÃ÷£ºÖ÷³ÌĞò(Host)´´½¨Ïòµ¼
-  ´´½¨ÈÕÆÚ£º2011.01.29
-  ×÷Õß£ºWZW
-  °æÈ¨£ºWZW
+ï»¿{ ------------------------------------
+  åŠŸèƒ½è¯´æ˜ï¼šä¸»ç¨‹åº(Host)åˆ›å»ºå‘å¯¼
+  åˆ›å»ºæ—¥æœŸï¼š2011.01.29
+  ä½œè€…ï¼šWZW
+  ç‰ˆæƒï¼šWZW
   ------------------------------------- }
 unit uHostAppExpt;
 
@@ -113,7 +113,7 @@ uses uExptConst;
 
 const
   HostName     = 'NewHostApp.dpr';
-  MainFormName ='FrmMain';//Ö÷´°ÌåÃû³Æ
+  MainFormName ='FrmMain';//ä¸»çª—ä½“åç§°
 
 procedure RegNewHostExpt;
 begin
@@ -160,7 +160,7 @@ end;
 
 function TNewHostExpt.GetComment: string;
 begin
-  Result := 'Ö÷³ÌĞò(Host)Ïòµ¼';
+  Result := 'ä¸»ç¨‹åº(Host)å‘å¯¼';
 end;
 
 function TNewHostExpt.GetCreatorType: string;
@@ -185,7 +185,7 @@ end;
 
 function TNewHostExpt.GetGlyph: Cardinal;
 begin
-  Result := LoadIcon(HInstance, 'F'); // ¼ÓÔØÍ¼±ê
+  Result := LoadIcon(HInstance, 'F'); // åŠ è½½å›¾æ ‡
 end;
 
 function TNewHostExpt.GetIDString: string;
@@ -195,7 +195,7 @@ end;
 
 function TNewHostExpt.GetName: string;
 begin
-  Result := 'Ö÷³ÌĞò(Host)';
+  Result := 'ä¸»ç¨‹å¼(Host)';
 end;
 
 function TNewHostExpt.GetOptionFileName: string;
@@ -287,7 +287,7 @@ begin
     + 'begin ' + #13#10  //GetFormName
     + '  Application.Initialize;'+#13#10
     + '  Application.MainFormOnTaskbar := True; '+#13#10
-    //+ '  Application.CreateForm(T'+MainFormName+','+MainFormName+');'+#13#10 //Õâ¾ä»á×Ô¶¯¼ÓÉÏ...
+    //+ '  Application.CreateForm(T'+MainFormName+','+MainFormName+');'+#13#10 //è¿™å¥ä¼šè‡ªåŠ¨åŠ ä¸Š...
     + '  Application.Run;'+#13#10
     + 'end.' + #13#10;
   Result := StringToIOTAFile(s);

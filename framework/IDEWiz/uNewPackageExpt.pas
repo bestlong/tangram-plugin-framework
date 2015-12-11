@@ -1,8 +1,8 @@
-{ ------------------------------------
-  ¹¦ÄÜËµÃ÷£º°üÉú³É×¨¼Ò
-  ´´½¨ÈÕÆÚ£º2010.05.08
-  ×÷Õß£ºWZW
-  °æÈ¨£ºWZW
+ï»¿{ ------------------------------------
+  åŠŸèƒ½è¯´æ˜ï¼šåŒ…ç”Ÿæˆä¸“å®¶
+  åˆ›å»ºæ—¥æœŸï¼š2010.05.08
+  ä½œè€…ï¼šWZW
+  ç‰ˆæƒï¼šWZW
   ------------------------------------- }
 unit uNewPackageExpt;
 
@@ -160,7 +160,7 @@ end;
 
 function TNewPackageExpt.GetComment: string;
 begin
-  Result := '°üÄ£¿éÏòµ¼';
+  Result := 'åŒ…æ¨¡å—å‘å¯¼';
 end;
 
 function TNewPackageExpt.GetCreatorType: string;
@@ -195,7 +195,7 @@ end;
 
 function TNewPackageExpt.GetName: string;
 begin
-  Result := 'BPLÄ£¿é';
+  Result := 'BPLæ¨¡å—';
 end;
 
 function TNewPackageExpt.GetOptionFileName: string;
@@ -260,7 +260,7 @@ end;
 
 procedure TNewPackageExpt.NewDefaultProjectModule(const Project: IOTAProject);
 begin
-  // Ìí¼Ó°üÒıÓÃÔÚÕâÀï¼Ó²ÅÓĞĞ§£¬ÔÚNewProjectResourceÎŞĞ§....
+  // æ·»åŠ åŒ…å¼•ç”¨åœ¨è¿™é‡ŒåŠ æ‰æœ‰æ•ˆï¼Œåœ¨NewProjectResourceæ— æ•ˆ....
   Project.AddFile('Tangram_Core.dcp', False);
   //Project.AddFile('Base.dcp', False);
 end;

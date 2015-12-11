@@ -25,7 +25,7 @@
 		<PropertyGroup Condition="'$(Base)'!=''">
 			<DesignOnlyPackage>true</DesignOnlyPackage>
 			<DCC_ImageBase>00400000</DCC_ImageBase>
-			<DCC_DependencyCheckOutputName>C:\Documents and Settings\All Users\Documents\RAD Studio\7.0\Bpl\IDEWiz.bpl</DCC_DependencyCheckOutputName>
+			<DCC_DependencyCheckOutputName>C:\Users\Public\Documents\RAD Studio\7.0\Bpl\IDEWiz.bpl</DCC_DependencyCheckOutputName>
 			<GenDll>true</GenDll>
 			<DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
 			<GenPackage>true</GenPackage>

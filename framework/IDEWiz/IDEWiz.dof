@@ -152,7 +152,7 @@ d:\program files\borland\delphi7\Projects\Bpl\asgd7.bpl=TMS TAdvStringGrid
 d:\program files\borland\delphi7\Projects\Bpl\DclEhLib70.bpl=EhLib 4.0 Components
 d:\program files\borland\delphi7\Projects\Bpl\DclEhLibDataDrivers70.bpl=EhLib 4.0 DataDrivers
 d:\program files\borland\delphi7\Projects\Bpl\MyPackage.bpl=(untitled)
-d:\program files\borland\delphi7\Projects\Bpl\AlphaPopuEditD7.bpl=IOCPSOCKET Î¯∆Ù»Ÿ 2009ƒÍ2‘¬12»’
+d:\program files\borland\delphi7\Projects\Bpl\AlphaPopuEditD7.bpl=IOCPSOCKET ÊªïÂêØËç£ 2009Âπ¥2Êúà12Êó•
 d:\program files\borland\delphi7\Projects\Bpl\XPAppWiz.bpl=(untitled)
 d:\program files\borland\delphi7\Bin\dclindy70.bpl=Internet Direct (Indy) for D7 Property and Component Editors
 d:\program files\borland\delphi7\Projects\Bpl\dclusr70.bpl=Borland User Components
@@ -165,7 +165,7 @@ Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
 [HistoryLists\hlOutputDirectorry]
 Count=2
 Item0=..\bin
-Item1=$(PlatFormPath)\±‡“Î
+Item1=$(PlatFormPath)\ÁºñËØë
 [HistoryLists\hlBPLOutput]
 Count=1
 Item0=..\bin

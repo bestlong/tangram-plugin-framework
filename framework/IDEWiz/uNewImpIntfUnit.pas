@@ -1,4 +1,4 @@
-unit uNewImpIntfUnit;
+ï»¿unit uNewImpIntfUnit;
 
 interface
 
@@ -42,7 +42,7 @@ procedure TFrmNewImptUntfUnit.btn_OKClick(Sender: TObject);
 begin
   if trim(edt_className.Text)='' then
   begin
-    MessageBox(self.Handle,'ÀàÃû²»ÄÜÎª¿Õ£¡','ÌáÊ¾',MB_OK+MB_ICONWARNING);
+    MessageBox(self.Handle,'ç±»åä¸èƒ½ä¸ºç©ºï¼','æç¤º',MB_OK+MB_ICONWARNING);
     edt_className.SetFocus;
     exit;
   end;
@@ -50,7 +50,7 @@ begin
   begin
     if Trim(Edt_IntfName.Text)='' then
     begin
-      MessageBox(self.Handle,'ÇëÊäÈë½Ó¿ÚÃû³Æ£¡','ÌáÊ¾',MB_OK+MB_ICONWARNING);
+      MessageBox(self.Handle,'è¯·è¾“å…¥æ¥å£åç§°ï¼','æç¤º',MB_OK+MB_ICONWARNING);
       Edt_IntfName.SetFocus;
       exit;
     end;
@@ -86,7 +86,7 @@ begin
   if self.EnableIntfInfo then
   begin
     if Edt_IntfName.Text='' then
-      Edt_IntfName.Text:='ÀıÈç:×¢²á±í½Ó¿Ú(IRegistry)';
+      Edt_IntfName.Text:='ä¾‹å¦‚:æ³¨å†Œè¡¨æ¥å£(IRegistry)';
 
     if edt_IntfVer.Text='' then
       edt_IntfVer.Text:=FormatDateTime('yyyymmdd',now)+'.001';

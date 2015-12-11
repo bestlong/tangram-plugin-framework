@@ -1,8 +1,8 @@
-{------------------------------------
-  ¹¦ÄÜËµÃ÷£º´°¿ÚÉú³É×¨¼Ò
-  ´´½¨ÈÕÆÚ£º2010.05.09
-  ×÷Õß£ºWZW
-  °æÈ¨£ºWZW
+ï»¿{------------------------------------
+  åŠŸèƒ½è¯´æ˜ï¼šçª—å£ç”Ÿæˆä¸“å®¶
+  åˆ›å»ºæ—¥æœŸï¼š2010.05.09
+  ä½œè€…ï¼šWZW
+  ç‰ˆæƒï¼šWZW
 -------------------------------------}
 unit uNewFormExpt;
 
@@ -120,7 +120,7 @@ end;
 
 function TNewFormExpt.GetComment: string;
 begin
-  Result:='´°ÌåÉú³ÉÏòµ¼';
+  Result:='çª—ä½“ç”Ÿæˆå‘å¯¼';
 end;
 
 function TNewFormExpt.GetCreatorType: string;
@@ -140,7 +140,7 @@ end;
 
 function TNewFormExpt.GetFormName: string;
 begin
-  Result:='NewForm1';//ÕâÀï»¹µãĞ¡ÎÊÌâ,Òª×Ô¶¯Éú³ÉÃû³Æ¡£¡£¡£
+  Result:='NewForm1';//è¿™é‡Œè¿˜ç‚¹å°é—®é¢˜,è¦è‡ªåŠ¨ç”Ÿæˆåç§°ã€‚ã€‚ã€‚
 end;
 
 function TNewFormExpt.GetGlyph: Cardinal;
@@ -170,7 +170,7 @@ end;
 
 function TNewFormExpt.GetName: string;
 begin
-  Result:='ÆÕÍ¨´°Ìå';
+  Result:='æ™®é€šçª—ä½“';
 end;
 
 function TNewFormExpt.GetOwner: IOTAModule;

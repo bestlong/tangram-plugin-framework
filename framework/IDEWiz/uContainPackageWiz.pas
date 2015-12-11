@@ -1,4 +1,4 @@
-unit uContainPackageWiz;
+ï»¿unit uContainPackageWiz;
 
 interface
 
@@ -118,7 +118,7 @@ end;
 
 function TContainPackageWiz.GetComment: string;
 begin
-  Result:='°Ñ¶à¸ö°üºÏ²¢³ÉÒ»¸ö°ü';
+  Result:='æŠŠå¤šä¸ªåŒ…åˆå¹¶æˆä¸€ä¸ªåŒ…';
 end;
 
 function TContainPackageWiz.GetCreatorType: string;
@@ -153,7 +153,7 @@ end;
 
 function TContainPackageWiz.GetName: string;
 begin
-  Result:='°üºÏ²¢Ïòµ¼';
+  Result:='åŒ…åˆå¹¶å‘å¯¼';
 end;
 
 function TContainPackageWiz.GetOptionFileName: string;

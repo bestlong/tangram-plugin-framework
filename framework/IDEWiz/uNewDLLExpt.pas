@@ -1,8 +1,8 @@
-{ ------------------------------------
-  ¹¦ÄÜËµÃ÷£ºDLLÄ£¿éÉú³É×¨¼Ò
-  ´´½¨ÈÕÆÚ£º2011.01.25
-  ×÷Õß£ºWZW
-  °æÈ¨£ºWZW
+ï»¿{ ------------------------------------
+  åŠŸèƒ½è¯´æ˜ï¼šDLLæ¨¡å—ç”Ÿæˆä¸“å®¶
+  åˆ›å»ºæ—¥æœŸï¼š2011.01.25
+  ä½œè€…ï¼šWZW
+  ç‰ˆæƒï¼šWZW
   ------------------------------------- }
 unit uNewDLLExpt;
 
@@ -161,7 +161,7 @@ end;
 
 function TNewDLLExpt.GetComment: string;
 begin
-  Result:='DLLÄ£¿éÏòµ¼';
+  Result:='DLLæ¨¡å—å‘å¯¼';
 end;
 
 function TNewDLLExpt.GetCreatorType: string;
@@ -186,7 +186,7 @@ end;
 
 function TNewDLLExpt.GetGlyph: Cardinal;
 begin
-  Result := LoadIcon(HInstance, 'D');//¼ÓÔØÍ¼±ê
+  Result := LoadIcon(HInstance, 'D');//åŠ è½½å›¾æ ‡
 end;
 
 function TNewDLLExpt.GetIDString: string;
@@ -196,7 +196,7 @@ end;
 
 function TNewDLLExpt.GetName: string;
 begin
-  Result:='DLLÄ£¿é';
+  Result:='DLLæ¨¡å—';
 end;
 
 function TNewDLLExpt.GetOptionFileName: string;
@@ -273,7 +273,7 @@ procedure TNewDLLExpt.NewProjectResource(const Project: IOTAProject);
 begin
   (Project.ProjectOptions as IOTAProjectOptionsConfigurations).BaseConfiguration.AsBoolean['UsePackages']:=True;
   (Project.ProjectOptions as IOTAProjectOptionsConfigurations).BaseConfiguration.Value['DCC_UsePackage']:='vcl;rtl;Tangram_Core;';
-   //D2009ÒÔÉÏÏÂÃæ·½·¨²»ÄÜÓÃÁË
+   //D2009ä»¥ä¸Šä¸‹é¢æ–¹æ³•ä¸èƒ½ç”¨äº†
  // Project.ProjectOptions.Values['UsePackages']:=True;
   //Project.ProjectOptions.Values['Packages']:='rtl;Tangram_Core';
 end;
