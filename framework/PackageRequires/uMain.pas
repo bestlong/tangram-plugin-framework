@@ -1,4 +1,4 @@
-unit uMain;
+ï»¿unit uMain;
 
 interface
 
@@ -139,7 +139,7 @@ var dir,s,FullName,toName:string;
     i:Integer;
 begin
   if lis_RequirePackage.Items.Count=0 then exit;
-  if SelectDirectory('Ñ¡Ôñµ¼³öÄ¿Â¼:', '', Dir) then
+  if SelectDirectory('é€‰æ‹©å¯¼å‡ºç›®å½•:', '', Dir) then
   begin
     for i:=0 to self.lis_RequirePackage.Items.Count-1 do
     begin
@@ -149,9 +149,9 @@ begin
       begin
         toName:=Dir+'\'+s;
         CopyFile(pchar(FullName),pchar(toName),False);
-      end else MessageBox(self.Handle,pchar('ÕÒ²»µ½'+FullName+'°ü£¡'),'´íÎó',MB_OK+MB_ICONERROR);
+      end else MessageBox(self.Handle,pchar('æ‰¾ä¸åˆ°'+FullName+'åŒ…ï¼'),'é”™è¯¯',MB_OK+MB_ICONERROR);
     end;
-    if MessageBox(self.Handle,'ÒÑ¾­µ¼³öµ½Ö¸¶¨Ä¿Â¼£¬ÊÇ·ñ´ò¿ª¸ÃÄ¿Â¼£¿','µ¼³öÍê³É',MB_YESNO+MB_ICONQUESTION)=IDYES then
+    if MessageBox(self.Handle,'å·²ç»å¯¼å‡ºåˆ°æŒ‡å®šç›®å½•ï¼Œæ˜¯å¦æ‰“å¼€è¯¥ç›®å½•ï¼Ÿ','å¯¼å‡ºå®Œæˆ',MB_YESNO+MB_ICONQUESTION)=IDYES then
       shellexecute(application.Handle,'open',pchar(Dir),nil,nil,SW_SHOWNORMAL);
   end;
 end;
