@@ -1,0 +1,8 @@
+*.dcu
+
+*.local
+*.identcache
+*.tvsconfig
+
+__history/
+*.~*
