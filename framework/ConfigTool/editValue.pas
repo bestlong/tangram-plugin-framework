@@ -1,4 +1,4 @@
-unit editValue;
+锘縰nit editValue;
 
 interface
 
@@ -32,17 +32,17 @@ procedure Tfrm_EditValue.btn_OkClick(Sender: TObject);
 begin
   if trim(edt_Name.text)='' then
   begin
-    showmessage('请输入值名称！');
+    showmessage('璇疯緭鍏ュ�煎悕绉帮紒');
     exit;
   end;
   if Pos(':',edt_Name.Text)>0 then
   begin
-    showmessage('名称不能包含'':''!');
+    showmessage('鍚嶇О涓嶈兘鍖呭惈'':''!');
     exit;
   end;
   {if edt_Value.Text='' then
   begin
-    showmessage('请输入值！');
+    showmessage('璇疯緭鍏ュ�硷紒');
     exit;
   end; }
   self.ModalResult:=mrOK;

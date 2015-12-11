@@ -1,4 +1,4 @@
-unit ModuleMgr;
+ï»¿unit ModuleMgr;
 
 interface
 
@@ -64,7 +64,7 @@ uses SysSvc,ModuleInstallerIntf;
   //TPro_GetModuleClass=function :TModuleClass;
 const
   ModuleKey='SYSTEM\LOADMODULE';
-  Value_Module='Module';//×¢²á±í¹Ø¼ü×Ö¡£¡£¡£
+  Value_Module='Module';//æ³¨å†Œè¡¨å…³é”®å­—ã€‚ã€‚ã€‚
   Value_Load='load';//
 
 procedure Tfrm_ModuleMgr.InstallModule(const ModuleFile: string);
@@ -77,8 +77,8 @@ begin
   Except
     on E:Exception do
     begin
-      msg:=Format('´íÎó£º%s£¬¿ÉÄÜ[%s]²»ÊÇÏµÍ³Ö§³ÖµÄÄ£¿é£¡',[E.Message,ModuleFile]);
-      Application.MessageBox(pchar(msg),'°²×°Ä£¿é',MB_OK+MB_ICONERROR);
+      msg:=Format('é”™è¯¯ï¼š%sï¼Œå¯èƒ½[%s]ä¸æ˜¯ç³»ç»Ÿæ”¯æŒçš„æ¨¡å—ï¼',[E.Message,ModuleFile]);
+      Application.MessageBox(pchar(msg),'å®‰è£…æ¨¡å—',MB_OK+MB_ICONERROR);
     end;
   end;
 end;
@@ -93,8 +93,8 @@ begin
   Except
     on E:Exception do
     begin
-      msg:=Format('Ğ¶ÔØÄ£¿éÊ§°Ü£¬´íÎó£º%s',[E.Message]);
-      Application.MessageBox(pchar(msg),'Ğ¶ÔØÄ£¿é',MB_OK+MB_ICONERROR);
+      msg:=Format('å¸è½½æ¨¡å—å¤±è´¥ï¼Œé”™è¯¯ï¼š%s',[E.Message]);
+      Application.MessageBox(pchar(msg),'å¸è½½æ¨¡å—',MB_OK+MB_ICONERROR);
     end;
   end;
 end;
@@ -134,7 +134,7 @@ begin
     Reg:=SysService as IRegistry;
     if Reg.OpenKey(Key,False) then
     begin
-      //´¦ÀíÖµ
+      //å¤„ç†å€¼
       Reg.GetValueNames(ValueList);
       for i := 0 to ValueList.count - 1 do
       begin
@@ -168,10 +168,10 @@ begin
         end;
       end;
     end;
-    //ÏòÏÂ²éÕÒ
+    //å‘ä¸‹æŸ¥æ‰¾
     Reg.GetKeyNames(SubKeyList);
     for i := 0 to SubKeyList.Count - 1 do
-      DisModuleInList(Key+'\'+SubKeyList[i]);//µİ¹é
+      DisModuleInList(Key+'\'+SubKeyList[i]);//é€’å½’
   finally
     SubKeyList.Free;
     ValueList.Free;
@@ -192,7 +192,7 @@ begin
   if Assigned(Item.Data) then
   begin
     if PModuleRec(Item.Data)^.PathInvalid then
-      InfoTip:=Format('Ä£¿é[%s]Â·¾¶²»ÕıÈ·£¬ÇëÖØĞÂ°²×°£¡',[PModuleRec(Item.Data)^.Module]);
+      InfoTip:=Format('æ¨¡å—[%s]è·¯å¾„ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°å®‰è£…ï¼',[PModuleRec(Item.Data)^.Module]);
   end;
 end;
 
@@ -250,7 +250,7 @@ begin
     begin
       mRec:=PModuleRec(self.lv_module.Selected.Data);
       Path:=mRec^.ModuleFileValue;
-      if InputQuery('±à¼­','±à¼­Ä£¿éÂ·¾¶:'+#13#10+'($APP_PATH)=³ÌĞòËùÔÚÄ¿Â¼',Path) then
+      if InputQuery('ç¼–è¾‘','ç¼–è¾‘æ¨¡å—è·¯å¾„:'+#13#10+'($APP_PATH)=ç¨‹åºæ‰€åœ¨ç›®å½•',Path) then
       begin
         mRec^.ModuleFileValue:=Path;
         mRec^.ModuleFile:=FormatPath(Path);
@@ -280,18 +280,18 @@ begin
       mRec:=PModuleRec(self.lv_module.Selected.Data);
       if FileExists(mRec^.ModuleFile) then
       begin
-        if MessageBox(self.Handle,pchar('ÄãÈ·¶¨ÒªĞ¶ÔØ['+mRec^.Module+']Ä£¿éÂğ£¿')
-          ,'Ğ¶ÔØÄ£¿é',MB_YESNO+MB_ICONQUESTION)<>IDYES then exit;
+        if MessageBox(self.Handle,pchar('ä½ ç¡®å®šè¦å¸è½½['+mRec^.Module+']æ¨¡å—å—ï¼Ÿ')
+          ,'å¸è½½æ¨¡å—',MB_YESNO+MB_ICONQUESTION)<>IDYES then exit;
         Try
           self.UnInstallModule(mRec^.ModuleFile);
           self.lv_module.Selected.Delete;
         Except
           on E:Exception do
-            MessageBox(self.Handle,pchar('Ğ¶ÔØ³ö´í£º'+E.Message),'Ğ¶ÔØÄ£¿é',MB_OK+MB_ICONERROR);
+            MessageBox(self.Handle,pchar('å¸è½½å‡ºé”™ï¼š'+E.Message),'å¸è½½æ¨¡å—',MB_OK+MB_ICONERROR);
         end;
       end else begin
-        if MessageBox(self.Handle,pchar('Ä£¿é['+mRec^.Module
-          +']Â·¾¶²»ÕıÈ·£¬ÎŞ·¨Ğ¶ÔØ£¬ÊÇ·ñÖ±½Ó´Ó×¢²á±íÉ¾³ı¸ÃÄ£¿éĞÅÏ¢£¿'),'Ğ¶ÔØÄ£¿é',MB_YESNO+MB_ICONQUESTION)=IDYES then
+        if MessageBox(self.Handle,pchar('æ¨¡å—['+mRec^.Module
+          +']è·¯å¾„ä¸æ­£ç¡®ï¼Œæ— æ³•å¸è½½ï¼Œæ˜¯å¦ç›´æ¥ä»æ³¨å†Œè¡¨åˆ é™¤è¯¥æ¨¡å—ä¿¡æ¯ï¼Ÿ'),'å¸è½½æ¨¡å—',MB_YESNO+MB_ICONQUESTION)=IDYES then
         begin
           Reg:=SysService as IRegistry;
           if Reg.OpenKey(mRec^.Key) then
@@ -316,12 +316,12 @@ begin
       try
         FileName:=self.OpenDialog1.Files[i];
         self.InstallModule(FileName);
-        //Ë¢ĞÂ
+        //åˆ·æ–°
         self.lv_module.Clear;
         self.DisModuleInList(ModuleKey);
       except
         on E:Exception do
-          MessageBox(self.Handle,pchar('°²×°Ä£¿éÊ§°Ü£º'+E.Message),'°²×°Ä£¿é',MB_OK+MB_ICONERROR);
+          MessageBox(self.Handle,pchar('å®‰è£…æ¨¡å—å¤±è´¥ï¼š'+E.Message),'å®‰è£…æ¨¡å—',MB_OK+MB_ICONERROR);
       end;
     end;
   end;

@@ -1,4 +1,4 @@
-unit newKey;
+锘縰nit newKey;
 
 interface
 
@@ -32,17 +32,17 @@ procedure Tfrm_newKey.btn_OkClick(Sender: TObject);
 begin
   if cb_ParentKey.ItemIndex=-1 then
   begin
-    showmessage('请选择父节点！');
+    showmessage('璇烽�夋嫨鐖惰妭鐐癸紒');
     exit;
   end;
   if trim(edt_KeyName.Text)='' then
   begin
-    showmessage('请输入节点名称！');
+    showmessage('璇疯緭鍏ヨ妭鐐瑰悕绉帮紒');
     exit;
   end;
   if Pos(':',edt_KeyName.Text)>0 then
   begin
-    showmessage('节点名称不能包含'':''!');
+    showmessage('鑺傜偣鍚嶇О涓嶈兘鍖呭惈'':''!');
     exit;
   end;
   self.ModalResult:=mrOK;

@@ -50,8 +50,7 @@ object frm_EditValue: Tfrm_EditValue
     Height = 25
     Caption = #30830#23450
     Default = True
-    TabOrder = 2
-    OnClick = btn_OkClick
+    DoubleBuffered = True
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -70,6 +69,9 @@ object frm_EditValue: Tfrm_EditValue
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    ParentDoubleBuffered = False
+    TabOrder = 2
+    OnClick = btn_OkClick
   end
   object btn_Cancel: TBitBtn
     Left = 260
@@ -77,7 +79,9 @@ object frm_EditValue: Tfrm_EditValue
     Width = 75
     Height = 25
     Caption = #21462#28040
-    TabOrder = 3
+    DoubleBuffered = True
     Kind = bkCancel
+    ParentDoubleBuffered = False
+    TabOrder = 3
   end
 end

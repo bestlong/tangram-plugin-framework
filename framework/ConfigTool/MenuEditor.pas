@@ -1,4 +1,4 @@
-unit MenuEditor;
+ï»¿unit MenuEditor;
 
 interface
 
@@ -74,11 +74,11 @@ begin
     aList:=TStringList.Create;
     vList:=TStringList.Create;
     try
-      self.tv_Menu.Items.AddChild(nil,'²Ëµ¥');
+      self.tv_Menu.Items.AddChild(nil,'èœå•');
       Reg.GetValueNames(aList);
       for i:=0 to aList.Count-1 do
       begin
-        PNode:=self.GetTVNode(nil,'²Ëµ¥');
+        PNode:=self.GetTVNode(nil,'èœå•');
         vName:=aList[i];
         if Reg.ReadString(vName,vStr) then
         begin

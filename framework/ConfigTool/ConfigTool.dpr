@@ -21,7 +21,7 @@ begin
   {$ENDIF}
   Application.LoadModuleFromRegistry:=False;
   Application.HintHidePause:=1000*30;
-  Application.Title := '¿ò¼ÜÅäÖÃ¹¤¾ß';
+  Application.Title := 'æ¡†æ¶é…ç½®å·¥å…·';
   Application.CreateForm(Tfrm_Main, frm_Main);
   Application.Run;
 end.

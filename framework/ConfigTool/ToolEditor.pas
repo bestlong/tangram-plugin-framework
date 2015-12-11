@@ -1,4 +1,4 @@
-unit ToolEditor;
+Ôªøunit ToolEditor;
 
 interface
 
@@ -71,7 +71,7 @@ var aList,vList:TStrings;
 begin
   if Reg.OpenKey(ToolKey) then
   begin
-    PNode:=self.tv_Tool.Items.AddChild(nil,'π§æﬂ¿∏');
+    PNode:=self.tv_Tool.Items.AddChild(nil,'Â∑•ÂÖ∑Ê†è');
     aList:=TStringList.Create;
     vList:=TStringList.Create;
     try
